@@ -1,0 +1,124 @@
+﻿
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; height=device-height; initial-scale=1.0; maximum-scale=1.0;user-scalable=0;"/>
+<meta content="telephone=no" name="format-detection">
+<title>教育</title>
+<link href="../css/wxstyle.css?201510231407" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.js?201510231407" type="text/javascript"></script>
+<script src="../js/wxstaticconfig.js?201510231407" type="text/javascript"></script>
+<script src="../js/wxutil.js?201510231407" type="text/javascript"></script>
+<script src="../js/Action.js" type="text/javascript"></script>
+<script src="../js/wxconfig.js?201510231407" type="text/javascript"></script>
+<script src="../js/weixin.js?201510231407" type="text/javascript"></script>
+<script src="../js/iscroll.js?201510231407" type="text/javascript"></script>
+<script src="../js/display.js?201510231407" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="globalBgImg"></div>
+<div class="l-container l-container--nobtonavi" style=" min-height:100%;
+">
+    <div class="iscroll_content" style="
+">
+        <div class="l-mainbx">
+			<div class="contenttext" style="
+			">
+				<div class="contenttitle" style="font-size:20px;font-weight:bold;
+">
+				</div>
+				<div style="font-size:16px;">
+				<P><div style='padding-top:10px;padding-bottom:10px;'><img width='100%' class="content_image" onclick="bizapp.showimages(this)" src="../image/26858.png"/></div></P>
+<P><div style='padding-top:10px;padding-bottom:10px;'><img width='100%' class="content_image" onclick="bizapp.showimages(this)" src="../image/26859.png"/></div></P>
+<P><div style='padding-top:10px;padding-bottom:10px;'><img width='100%' class="content_image" onclick="bizapp.showimages(this)" src="../image/26860.png"/></div></P>
+<P><div style='padding-top:10px;padding-bottom:10px;'><img width='100%' class="content_image" onclick="bizapp.showimages(this)" src="../image/26861.png"/></div></P>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+ 
+<script>
+var bizapp = {};
+bizapp.playvideo = function (obj) {
+	var that = this;
+	var alt = "http://api.3g.youku.com/layout/phone2_1/play?point=1&id=" + obj.alt
+		+ "&pid=352e7f78a0bc479b&format=4&language=guoyu&audiolang=1&guid=c7a0fd9f8f19ea5cbafde16f327f8004&ver=2.3.1&operator=%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9A_46001&network=WIFI";
+	$.ajax({
+		url: alt,
+		dataType: "jsonp",
+		success: function (data) {
+			var url = "";
+			if (!!data && "results" in data && "3gphd" in data.results && data.results["3gphd"].length)
+				url = data["results"]["3gphd"][0]["url"];
+
+			if (url) {
+				if (deviceInfo.isAndroid)
+					location.href = url;
+				else
+					location.href = url;
+			}
+			else {
+				alert("视频播放失败");
+			}
+		},
+		error: function () {
+			alert("视频播放失败");
+		}
+	});
+}
+
+bizapp.showimages = function(img){
+	var imgContent = $(img).parents(".iscroll_content");
+	if (imgContent.length == 0) {
+		imgContent = $(img).parents(".image_content");
+	}
+
+	var imgs = imgContent.find(".content_image"),
+		thissrc = img.attributes["src"].nodeValue,
+		asrc = [],
+		i,
+		src,
+		n;
+
+	for (i = 0; i < imgs.length; i++) {
+		src = imgs[i].attributes["src"].nodeValue;
+		if (src == thissrc) n = i;
+		var ySrc = bizappResWebRoot + 'jslvd/'+src.slice(2);
+		asrc.push(ySrc);
+	}
+
+	Action.showImages(n, asrc);
+}
+
+bizapp.showSudokuImages = function(img, n){
+	var sodukuDiv = $(img).parents(".soduku_div");
+	
+	var imgs = sodukuDiv.find(".soduku_imageurl"),
+		thissrc = img.attributes["src"].nodeValue,
+		asrc = [],
+		i,
+		src;
+
+	for (i = 0; i < imgs.length; i++) {
+		src = imgs[i].attributes["title"].nodeValue;
+		var ySrc = bizappResWebRoot + 'jslvd/'+src.slice(2);
+		asrc.push(ySrc);
+	}
+
+	Action.showImages(n, asrc);
+}
+
+var shareMsg = '';
+var shareTitle = '';
+		 var shareIcon = '';
+var linkUrl = 'http://a.mo2.cn/res/jslvd/weixin/html_7382.html';
+var contentTitle = '教育';
+</script>
+</body>
+</html>
+<script>
+	document.querySelector(".l-mainbx").style.width = (document.documentElement.clientWidth - 20) + "px";
+</script>

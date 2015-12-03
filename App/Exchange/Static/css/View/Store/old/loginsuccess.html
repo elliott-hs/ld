@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>{$Think.config.title}</title>
+    <meta charset="utf-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <include file="public:css_" />    
+</head>
+<body>
+	<div class="bj hide" id="part1">
+		<div class="header">
+			<a href="javascript:history.go(-1)"><img src="{$Think.config.static_path}images/back.png" class="back"></a>
+			<h1>{$title}</h1>
+		</div>
+		<div class="form-login">
+			<div class="mt1">
+				<div class="bb1 pd">商品：<p id="business">请选择商品</p><span class="next"><img src="{$Think.config.static_path}images/next.png"></span></div>
+			</div>
+			<div class="mt1">
+				<div class="bb1 pd">积分：<p id="integrate" class="dib"></p></div>
+			</div>
+		</div>
+		<div class="footer">
+		    <a href="javascript:qrcode();"><div class="btn">生成订单</div></a>
+		</div>
+	</div>
+	<div class="bj" id="part2">
+		<div class="header">
+			<a href="javascript:history.go(-1)"><img src="{$Think.config.static_path}images/back.png" class="back"></a>
+			<h1>选择以下商品</h1>
+		</div>
+		<div class="form-choose">
+			<volist name="list" id="val" key="k">
+				<div class="dib checkbox"><span class="block"  data="{$val.id}|{$val.score}|{$val.price}|{$val.title}">{$val.title}</span></div>
+			</volist>
+			
+		</div>
+		<div class="footer">
+			<a href="__URL__/orderList?sid={$sid}"><div class="btn btn-org">查询订单</div></a>
+		    <div class="btn" id="commit">完成</div>
+		</div>
+	</div>
+<input type="hidden"  name="pid" id="pid" />
+<input type="hidden" name="score" id="score" />
+<input type="hidden"  name="price"  id="price"/>
+<input type="hidden" value="{$sid}" name="ssid"  id="sid"/>
+</body>
+<include file="public:js_" />   
+<script type="text/javascript">
+$(".checkbox .block").click(function(){
+		$(this).toggleClass("obj");
+		var obj='';
+		var inte=0;
+		var pid='';
+		var price=0;
+		$(".checkbox .obj").each(function(){
+			var str=$(this).attr("data");
+			var arr=str.split('|');
+			obj+=arr[3]+'<br>';
+			inte+=parseFloat(arr[1]);
+			price+=parseFloat(arr[2]);
+			pid+=arr[0]+',';
+		})
+		//alert(price);
+		$("#pid").val(pid);
+		$("#score").val(inte);
+		$("#price").val(price);
+		$("#business").html(obj);
+		$("#integrate").html(inte+"积分")
+})
+$("#commit").click(function(){
+	var choice=$("#business").text();
+	if(choice=='请选择商品'||choice==''){
+		Util.info("请选择商品");
+	}else{
+		$("#part2").addClass("hide");
+		$("#part1").removeClass("hide");		
+	}
+	
+})
+$(".next").click(function(){
+	$("#part1").addClass("hide");
+	$("#part2").removeClass("hide");
+})
+var lock = true;
+function qrcode(){
+	var pid = $("#pid").val();
+	var sid = $("#sid").val();
+	var score = $("#score").val();
+	var price = $("#price").val();
+	if(lock){
+	$.getJSON('__URL__/doAdd', {
+		pid : pid,
+		sid : sid,
+		score : score,
+		price : price,
+	},function(json) {
+			if(json.status >0 ){
+				location.href="__URL__/qrcode?qid="+json.qid+"&sid="+json.sid;
+			}else{
+				Util.info(json.info);
+			}
+	});
+	lock = false;
+	}
+	
+				
+}
+
+function orderlist(){
+}
+</script>
+</html>

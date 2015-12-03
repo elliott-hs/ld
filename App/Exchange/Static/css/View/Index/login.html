@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+     <title>{$Think.config.title} -- 商户登录</title>
+    <meta charset="utf-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+	<include file="public:css_" />    
+</head>
+<body>
+	<div class="bj">
+		<div style="width: 30%;margin: 0 auto;padding-top: 3em;">
+	    	<img src="{$Think.config.static_path}images/logo.png" style="width:100%">
+	    </div>
+		<div class="form-login">
+			<div class="mt1 inputbg">
+				<p class="name"><input type="text" id="name"></p>
+			</div>
+			<div class="mt1 inputbg">
+				<p class="pwd"><input type="password" id="pwd"></p>
+			</div>
+		    <!-- <div class="btn" style="margin: 2.5em 0 0 0;" id="submit">提交</div> -->
+		    <div style="width: 40%;margin: 2em auto;"  id="submit">
+		    	<img src="{$Think.config.static_path}images/login.png" style="width:100%">
+		    </div>
+		</div>
+		<div style="bottom: 2em;position: fixed;">
+	    	<img src="{$Think.config.static_path}images/word.png" style="width:100%">
+	    </div>
+	</div>
+
+</body>
+<include file="public:js_" />    
+<script type="text/javascript">
+	$("#submit").click(function(){
+		var p1=$("#name").val();
+		var p2=$("#pwd").val();
+		if(Util.isEmpty(p1)){
+			Util.info("请输入账户");
+			return;
+		}
+		if(Util.isEmpty(p2)){
+			Util.info("请输入密码");
+			return;
+		}else{
+			$.getJSON('__URL__/checkLogin', {
+				name : p1,
+				pwd : p2
+			},function(json) {
+					if(json.status > 0){
+						location.href='__APP__/Store/productList?sid='+json.data;
+					}else{
+						Util.info(json.info);
+					}
+				});
+			}
+	})
+</script>
+</html>

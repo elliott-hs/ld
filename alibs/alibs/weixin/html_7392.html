@@ -1,0 +1,32 @@
+﻿
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; height=device-height; initial-scale=1.0; maximum-scale=1.0;user-scalable=0;"/>
+<title>南京联盟商家</title>
+<style>
+body{
+	margin:0;overflow:auto;
+}
+</style>
+<script src="../js/iscroll.js?201510231407"></script>
+<script src="../wxjs/album.js?201510231407"></script>
+<script src="../js/wxconfig.js?201510231407" type="text/javascript"></script>
+<script src="../js/weixin.js?201510231407" type="text/javascript"></script>
+<script>
+	window.onload = function() {
+		new Album("#photos_container", [
+					'../image/26937.jpg'
+		]);
+	}
+	
+	var shareMsg = '';
+</script>
+</head>
+<body>
+	<div id="photos_container">
+		<div id="slider"></div>
+	</div>
+</body>
+</html>

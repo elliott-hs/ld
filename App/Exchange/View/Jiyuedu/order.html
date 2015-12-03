@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>绿地后台</title>
+    <meta charset="utf-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+	<style type="text/css">
+	*{margin:0;padding:0}
+	.header{width:100%;height:100px;background-size:100% 100%;top:0}
+	.header h2{color:#fff;text-align:center;line-height:60px}
+	#bj{background:#230B01;background-size: contain}
+	.form-login{text-align:center}
+	.form-login div{margin-bottom:2em}
+	#ma{height:3em;width:90%;border:0;padding-left:1em;border-radius:5px;-webkit-appearance:none;font-size:14px}
+	button{width:45%;border:0;background:#ffca2a;color:#ba1920;height:3em;border-radius:5px;font-size:14px;font-weight: 700}
+	.hide{display: none}
+	.person{width:100%;text-align:center}
+	.info{padding:5%;line-height:2;color:#fff;font-size:18px}
+	.logoname{width:80px;border-radius:50%}
+	.sure{border:0;background:#ffca2a;color:#ba1920;border-radius:5px;font-weight:700;margin-top:5%}
+	</style>    
+</head>
+<body  id="bj">
+	<div class="header">
+	    <h2>核销后台</h2>
+	</div>
+	<div class='form-login '>
+		<div><input type="tel" placeholder='请输入您的核销密码' id='ma'></div>
+		<button onclick='submit()'>确定</button>
+		<button>取消</button>
+	</div>
+	<div class="person hide">
+		<div class="info">
+			<img src="" class="logoname">
+			<p id="name"></p>
+			<p id="tel"></p>
+            <p id="status"></p>
+			<button class="sure">确定</button>
+			<button onclick='cancel()'>取消</button>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="{$Think.config.static_path}jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="{$Think.config.static_path}js/pxutil.js"></script>
+<script type="text/javascript">
+	var ma='';
+	function submit(){
+		ma = $("#ma").val();
+		if(Util.isEmpty(ma)){
+			Util.info("请填写兑奖码");
+			return;
+		}else{
+			$.getJSON('__URL__/getOrderByKey', {key:ma},function(json) {
+				if(json.status>0){
+					$(".logoname").attr("src",json.info['img']);
+					$("#name").html('姓名：'+json.info['name']);
+					$("#tel").html('电话：'+json.info['tel']);
+					var status = json.info['status'] == 1 ? '未使用' : '已使用';
+					$("#status").html('状态：'+status);
+					if(json.info['status'] == 2){
+						$(".sure").addClass("hide")
+					}
+					$(".form-login").addClass("hide")
+					$(".person").removeClass("hide");
+					//$("#tbody").html("<td>"+json.info['name']+"</td><td>"+json.info['tel']+"</td><td>"+str+"</td><td>"+btn+"</td>");
+				}else{
+					Util.info("兑奖码无效");
+				}
+		})
+		}
+		
+	}
+	function cancel(){
+		$(".form-login").removeClass("hide")
+		$(".person").addClass("hide");
+	}
+	$(".sure").click(function(){
+		$.getJSON('__URL__/updatestatus', {key:ma},function(json) {
+			if(json.status>0){
+				Util.info(json.info);
+				$(".sure").addClass("hide")
+				$("#status").html('状态：已使用');
+			}else{
+				Util.info(json.info);
+			}
+		})
+	})
+	
+
+</script>
+</html>
+

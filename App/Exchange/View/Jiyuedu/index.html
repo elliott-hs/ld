@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>江苏绿地会  感"蟹"有你</title>
+<link href="{$Think.config.static_path}css/pxmain.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#loading{
+	text-align:center;
+	position:fixed;
+	top:45%;
+	height:100%;
+	left:50%;
+	}
+.hide {
+	display: none;
+}
+</style>
+</head>
+<body class="bg">
+<div> <img src="{$Think.config.static_path}images/top.jpg" class="top">
+  <div class="bar">
+    <div class="word">
+      <p class="ulev18">您已收集<span class="num">
+        <empty name="num">0
+          <else/>
+          {$num}</empty>
+        </span>个阅读</p>
+      <p class="tips">转发本页给好友，每1人点击，即收集1个阅读数</p>
+    </div>
+    <div class="btn share">立即<br>
+      转发</div>
+    <div class="btn share refresh hide">刷新<br>
+      阅读</div>
+  </div>
+</div>
+<div class="content">
+  <div class="line1 mt1">
+    <div class="border"></div>
+    <div class="">
+      <div class="ruleimg"> <img src="{$Think.config.static_path}images/pxicon1.png" class="icon2"> </div>
+      <div class="prize">
+        <div class="bb1 pdtb">
+          <div class="prizeimg"> <img src="{$Think.config.static_path}images/prize1.png"></div>
+          <if condition="$tid1.status eq 2">
+            <div class="btn   gray exchange2">兑换<br>成功 </div>
+            <else/>
+            <empty name="tid1">
+              <div class="btn <?php if(!$huiyuan){?> gray <?php }?>exchange1">我要<br>
+                兑换</div>
+              <else/>
+              <div class="btn exchange">兑奖码<br>
+                {$tid1.id}</div>
+            </empty>
+          </if>
+        </div>
+        <div class="pdtb">
+          <div class="prizeimg"> <img src="{$Think.config.static_path}images/prize2.png"> </div>
+          <if condition="$tid2.status eq 2">
+            <div class="btn   gray exchange2">兑换<br>成功 </div>
+            <else/>
+            <empty name="tid2">
+              <div class="btn <?php  if($num<5){?>gray<?php }?>  exchange2">我要<br>
+                兑换</div>
+              <else/>
+              <div class="btn exchange">兑奖码<br>
+                {$tid2.id}</div>
+            </empty>
+          </if>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="line1">
+    <div class="border"></div>
+    <div class="">
+      <div class="ruleimg"> <img src="{$Think.config.static_path}images/pxicon2.png" class="icon2"> </div>
+      <div class="ruleword">
+        <p>1、本次活动仅针对微信端注册的会员；</p>
+        <p>2、1元（100积分）兑换1只螃蟹，每人限1次；</p>
+        <p>3、集满5个阅读数，可兑换1只螃蟹，每人限1次；</p>
+        <p>4、参加现场部分游戏，获胜者可领取1只螃蟹；</p>
+        <p>5、本活动最终解释权归江苏绿地会所有。</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">我也要参加</div>
+<div class="flode hide" onclick="$(this).addClass('hide')"> <img src="{$Think.config.static_path}images/flode.png"> </div>
+</body>
+<script type="text/javascript" src="{$Think.config.static_path}jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="{$Think.config.static_path}js/pxutil.js"></script>
+<script charset="utf-8" type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">	
+var openid = "{$openid}";
+weixinShare({$signPackage},{$sharePackage});
+function weixinShare(configArr,shareArr){
+	alert(configArr.appId);
+	wx.config({
+		 // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+		debug: true,
+		appId: configArr.appId,
+		timestamp: configArr.timestamp, 
+		nonceStr:  configArr.nonceStr,
+		signature: configArr.signature,
+		jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','showOptionMenu','chooseImage', 'uploadImage', 'downloadImage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+	});
+	
+	wx.ready(function () {
+		wx.hideMenuItems({
+			menuList: ['menuItem:originPage', 'menuItem:openWithQQBrowser', 'menuItem:share:qq', 'menuItem:openWithSafari', 'menuItem:share:email', 'menuItem:readMode', 'menuItem:refresh'] // 要隐藏的菜单项，所有menu项见附录3
+		});
+		wx.showOptionMenu();
+		var shareData = {
+				title:  shareArr.title,
+				desc:    shareArr.desc,
+				link:    shareArr.link,
+				imgUrl:  shareArr.imgUrl,
+				success:function(res){
+				
+					$.getJSON('__URL__/sharelog',{openid:openid} ,function(json){	
+						
+					})
+				}
+			};
+		
+		wx.onMenuShareTimeline(shareData);
+		wx.onMenuShareAppMessage(shareData);
+	   
+		// config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+	});
+	wx.error(function (res) {
+	
+	});
+}
+
+
+       $(".footer").click(function(){
+			$.getJSON('__URL__/checkvip', {openid:openid},function(json) {
+					if(json.status  == 1 ){
+						$(".flode").removeClass("hide");
+					}else{
+						location.href=json.info;
+					}
+			});
+		})
+
+		$(".share").click(function() {
+			$(".flode").removeClass("hide");
+		})
+		$(".exchange1:not(.gray)").click(function(){
+			var code=$(this);
+			Util.showmsg("您确定兑换么,兑换消耗100积分","","","confirm",code,1,openid);
+			
+		})
+		$(".exchange2:not(.gray)").click(function(){
+			var code=$(this);
+			Util.showmsg("您确定兑换么,兑换后清空阅读数","","","confirm",code,2,openid);
+			
+		})
+		
+
+	</script>
+</html>

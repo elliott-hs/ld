@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>{$Think.config.title}</title>
+    <meta charset="utf-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <include file="public:css_" />    
+</head>
+<body>
+	<div class="bj hide" id="part1">
+		<!-- <div class="header">
+			<a href="javascript:history.go(-1)"><img src="{$Think.config.static_path}images/back.png" class="back"></a>
+			<h1>绿地商务城</h1>
+		</div> -->
+		<div style="width: 80%;margin: 0 auto;padding-top: 3em;">
+	    	<img src="{$Think.config.static_path}images/top2.png" style="width:100%">
+	    </div>
+		<div class="form-login">
+			<div class="mt1">
+				<div class="pd"><img src="{$Think.config.static_path}images/icon3.png" style="width: 2em;"><div class="bor-t"><p id="business">请选择商品</p></div><!-- <span class="next"><img src="{$Think.config.static_path}images/next.png"></span> --></div>
+			</div>
+			<div class="mt1">
+				<div class="pd"><img src="{$Think.config.static_path}images/icon4.png" style="width: 2em;vertical-align: bottom;"><div class="dib bor-r"><p  id="integrate"></p></div><span class="c4 pd1">积分</span></div>
+			</div>
+		</div>
+		<!-- <div class="footer">
+		    <a href="order.html"><div class="btn btn-org">查询订单</div></a>
+		    <a href="qrcode.html"><div class="btn">生成订单</div></a>
+
+		</div> -->
+
+		<div class="foot-icon" style="position: relative;margin-top:1em;bottom: 1em;">
+	    	<a href="javascript:qrcode();"><img src="{$Think.config.static_path}images/icon5.png" style="width:60%;margin-left:20%"></a>
+	    	<img src="{$Think.config.static_path}images/icon6.png" class="next">
+	    </div>
+		<div style="position: relative;">
+	    	<img src="{$Think.config.static_path}images/word.png" style="width:100%">
+	    </div>
+	</div>
+	<div id="part2"  class="bj">
+		<!-- <div class="header">
+			<a href="javascript:history.go(-1)"><img src="{$Think.config.static_path}images/back.png" class="back"></a>
+			<h1>选择以下商品</h1>
+		</div> -->
+		<div style="width: 80%;margin: 0 auto;padding-top: 3em;">
+	    	<img src="{$Think.config.static_path}images/top.png" style="width:100%">
+	    </div>
+		<!-- <div class="form-choose">
+			<div class="dib checkbox"><span class="block" data="1|英式奶茶1|100">英式奶茶1</span></div>
+			<div class="dib checkbox"><span class="block" data="2|英式奶茶2|200">英式奶茶2</span></div>
+			<div class="dib checkbox"><span class="block" data="3|英式奶茶3|300">英式奶茶3</span></div>
+		</div> -->
+		<div class="form-choose">
+		<volist name="list" id="val" key="k">
+			<div class="mt1 choose-good">
+				<span  data="{$val.id}|{$val.title}|{$val.score}|{$val.price}">{$val.title}</span>
+	    		<div class="count dib">
+					<button class="min1 hide" >－</button>
+					<input class="text_box1 hide"  type="num" value="0"  />
+					<button class="add1" type="button" >＋</button>
+				</div>
+			</div>
+			</volist>
+			
+		</div>
+		<div class="foot-icon">
+	    	<a href="__URL__/orderList?sid={$sid}"><img src="{$Think.config.static_path}images/icon1.png" style="width:30%;margin-left:15%"></a>
+	    	<img src="{$Think.config.static_path}images/icon2.png" style="width:30%;margin-left:10%" id="commit">
+	    </div>
+		<div style="bottom: 2em;position: fixed;">
+	    	<img src="{$Think.config.static_path}images/word.png" style="width:100%">
+	    </div>
+	</div>
+<input type="hidden"  name="pid" id="pid" />
+<input type="hidden" name="score" id="score" />
+<input type="hidden"  name="price"  id="price"/>
+<input type="hidden"  name="pnum"  id="pnum"/>
+<input type="hidden" value="{$sid}" name="ssid"  id="sid"/>
+</body>
+<include file="public:js_" />   
+<script type="text/javascript">
+	$(function () {
+	    	//添加减少购买数量
+			$(".choose-good .add1").click(function () {
+				$(this).parents(".choose-good").addClass("choose");
+				$(this).siblings().removeClass("hide");
+			    var t = $(this).siblings(".text_box1");
+				t.val(parseInt(t.val()) + 1);
+
+				var obj='',pid='',pnum='';
+				var inte=0,price=0;
+				$(".choose").each(function(){
+					var num=$(this).find(".text_box1").val();
+					var str=$(this).find("span").attr("data");
+					var arr=str.split('|');
+					pid+=arr[0]+',';//id
+					obj+=arr[1]+'×'+parseInt(num)+'<br>';//标题
+					inte+=parseInt(arr[2])*parseInt(num);//积分
+					price+=parseInt(arr[3])*parseInt(num);//价格
+					pnum +=parseInt(num)+',';
+					
+				})
+				//obj+=arr[1]+'<br>';
+				//inte+=parseInt(arr[2]);
+				$("#pnum").val(pnum);
+				$("#pid").val(pid);
+				$("#score").val(inte);
+				$("#price").val(price);
+				$("#integrate").html(inte)
+				$("#business").html(obj);
+				
+			})
+			$(".min1").click(function () {
+			    var t = $(this).siblings(".text_box1");
+				t.val(parseInt(t.val()) - 1);
+				if(t.val()<1){
+					$(this).parents(".choose-good").removeClass("choose");
+					t.addClass("hide");
+					$(this).addClass("hide");
+				}
+				var obj='',pid='',pnum='';
+				var inte=0,price=0;
+				$(".choose").each(function(){
+					var num=$(this).find(".text_box1").val();
+					var str=$(this).find("span").attr("data");
+					var arr=str.split('|');
+					pid+=arr[0]+','+'×'+parseInt(num);//id
+					obj+=arr[1]+'×'+parseInt(num)+'<br>';//标题
+					inte+=parseInt(arr[2])*parseInt(num);//积分
+					price+=parseInt(arr[3])*parseInt(num);//价格
+					pnum +=parseInt(num)+',';
+					
+				})
+				$("#pid").val(pid);
+				$("#score").val(inte);
+				$("#price").val(price);
+				$("#integrate").html(inte)
+				$("#business").html(obj);
+				$("#pnum").val(pnum);
+			});
+		})
+	
+	$("#commit").click(function(){
+		var choice=$("#business").text();
+		if(choice=='请选择商品'||choice==''){
+			Util.info("请选择商品");
+		}else{
+			$("#part2").addClass("hide");
+			$("#part1").removeClass("hide");		
+		}
+		
+	})
+	$(".next").click(function(){
+		$("#part1").addClass("hide");
+		$("#part2").removeClass("hide");
+	})
+	
+	var lock = true;
+	function qrcode(){
+		var pid = $("#pid").val();
+		var sid = $("#sid").val();
+		var score = $("#score").val();
+		var price = $("#price").val();
+	    var pnum = $("#pnum").val();
+		//alert(score);return;
+		if(lock){
+		$.getJSON('__URL__/doAdd', {
+			pid : pid,
+			sid : sid,
+			score : score,
+			price : price,
+			pnum : pnum
+		
+		},function(json) {
+				if(json.status >0 ){
+					location.href="__URL__/qrcode?qid="+json.qid+"&sid="+json.sid;
+				}else{
+					Util.info(json.info);
+				}
+		});
+		lock = false;
+		}			
+	}
+
+</script>
+</html>

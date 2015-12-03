@@ -1,0 +1,208 @@
+﻿
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; height=device-height; initial-scale=1.0; maximum-scale=1.0;user-scalable=0;"/>
+<title>徐州联盟商家</title>
+<link href="../css/wxstyle.css?201510231406" rel="stylesheet" type="text/css" />
+<script src="../js/wxmetro.js?201510231406" type="text/javascript"></script>
+<script src="../js/iscroll.js?201510231406" type="text/javascript"></script>
+<script src="../js/Action.js?201510231406" type="text/javascript"></script>
+<script src="../js/wxconfig.js?201510231406" type="text/javascript"></script>
+<script src="../js/weixin.js?201510231406" type="text/javascript"></script>
+<script src="../js/quanjin.js?201510231406" type="text/javascript"></script>
+<script src="../js/wxutil.js?201510231406" type="text/javascript"></script>
+<script src="../js/display.js?201510231406" type="text/javascript"></script>
+<script src="../js/jquery.js?201510231406" type="text/javascript"></script>
+</head>
+
+<body >
+<div class="globalBgImg" style="
+		background-image:url(../image/26895.png);
+"></div>
+	  <img src="../image/26830.png" style="position: relative; width:100%;"/>
+<div class="l-container l-container--nobtonavi nav_container" style="
+">
+    <div class="iscroll_content">
+        <div style="padding-top:8px;">
+            <div id="cuchuang" style="margin:0 auto;">
+            </div>
+            <div class="l-mainbx" id="metro_catalog_7376" style="width: 100%; margin: 0;margin-top:4px;padding:0;">
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		playOrPause();
+	});
+    new metro("#metro_catalog_7376", {
+        columns: 640,
+        titlesize: 14,
+        spacing: 8,
+        metroinfo: [
+				{
+					size:"640x80",
+					backimg: "../image/26905.png",
+					  show: true,
+					data: {
+						contentId: 7377,
+						type: "Article",
+						data: '',
+				      aTagHref: "html_7377.html?dt=201510231406"
+					}
+				}
+					,
+				{
+					size:"640x80",
+					backimg: "../image/26831.png",
+					  show: true,
+					data: {
+						contentId: 7378,
+						type: "Article",
+						data: '',
+				      aTagHref: "html_7378.html?dt=201510231406"
+					}
+				}
+					,
+				{
+					size:"640x80",
+					backimg: "../image/26841.png",
+					  show: true,
+					data: {
+						contentId: 7379,
+						type: "Article",
+						data: '',
+				      aTagHref: "html_7379.html?dt=201510231406"
+					}
+				}
+					,
+				{
+					size:"640x80",
+					backimg: "../image/26843.png",
+					  show: true,
+					data: {
+						contentId: 7381,
+						type: "Article",
+						data: '',
+				      aTagHref: "html_7381.html?dt=201510231406"
+					}
+				}
+					,
+				{
+					size:"640x80",
+					backimg: "../image/26857.png",
+					  show: true,
+					data: {
+						contentId: 7382,
+						type: "Article",
+						data: '',
+				      aTagHref: "html_7382.html?dt=201510231406"
+					}
+				}
+					,
+				{
+					size:"640x80",
+					backimg: "../image/26862.png",
+					  show: true,
+					data: {
+						contentId: 7383,
+						type: "Article",
+						data: '',
+				      aTagHref: "html_7383.html?dt=201510231406"
+					}
+				}
+					,
+				{
+					size:"640x80",
+					backimg: "../image/26869.png",
+					  show: true,
+					data: {
+						contentId: 7384,
+						type: "Article",
+						data: '',
+				      aTagHref: "html_7384.html?dt=201510231406"
+					}
+				}
+					,
+				{
+					size:"640x80",
+					backimg: "../image/26881.png",
+					  show: true,
+					data: {
+						contentId: 7385,
+						type: "Article",
+						data: '',
+				      aTagHref: "html_7385.html?dt=201510231406"
+					}
+				}
+					,
+				{
+					size:"640x80",
+					backimg: "../image/26882.png",
+					  show: true,
+					data: {
+						contentId: 7386,
+						type: "Article",
+						data: '',
+				      aTagHref: "html_7386.html?dt=201510231406"
+					}
+				}
+					,
+				{
+					size:"640x80",
+					backimg: "../image/26892.png",
+					  show: true,
+					data: {
+						contentId: 7387,
+						type: "Article",
+						data: '',
+				      aTagHref: "html_7387.html?dt=201510231406"
+					}
+				}
+        ],
+        event: {
+            click: function (data, index) {
+				gotoPage(data.contentId, data, '201510231406', 'jslvd');
+            }
+        }
+    });
+	
+	var preWidth = document.documentElement.clientWidth - parseInt(0);
+	var preHeight = preWidth * 0;
+	if(0 == 0){
+		new Display("#cuchuang", { type: 1});
+	}else{
+		new Display("#cuchuang", { type: 1, preWidth: preWidth, preHeight: preHeight });
+	}
+	
+	var shareMsg = '';
+	var shareTitle = '';
+			 var shareIcon = '';
+	
+	var isPlay = false;
+	function playOrPause(){
+		if(isPlay){
+			document.getElementById('audio').pause();
+			$('#audio_btn').removeClass('pause');
+		}else{
+			document.getElementById('audio').play();
+			$('#audio_btn').addClass('pause');
+		}
+		
+		isPlay = isPlay?false:true;
+	}
+
+	var linkUrl = 'http://a.mo2.cn/res/jslvd/weixin/html_7376.html';
+	var contentTitle = '徐州联盟商家';
+	
+	
+	// 设置和获取微信openId
+	var openId = request.QueryString('openid');
+	if(openId != '' && openId != null){
+		localStorage.setItem('openId_'+256, openId);
+	}
+</script>
+</body>
+</html>

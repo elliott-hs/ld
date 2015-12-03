@@ -1,0 +1,436 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cod",
+				"codeId"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"php",
+				"phpinfo"
+			],
+			[
+				"auth",
+				"authCode"
+			],
+			[
+				"jso",
+				"json_decode"
+			],
+			[
+				"card",
+				"card_no"
+			],
+			[
+				"co",
+				"codeId"
+			],
+			[
+				"open",
+				"openid"
+			],
+			[
+				"ope",
+				"openid"
+			],
+			[
+				"Sign",
+				"signPackage"
+			],
+			[
+				"s",
+				"signPackage"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"ti",
+				"timestamp"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"json",
+				"json_encode"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Widroom.php",
+			"settings":
+			{
+				"buffer_size": 1021,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/sun/MyApplication/php/ld/Widroom.php",
+		"/Users/sun/MyApplication/php/tp/App/Widroom/Controller/PointController.class.php",
+		"/Users/sun/MyApplication/php/tp/App/test/Controller/IndexController.class.php",
+		"/Users/sun/MyApplication/php/tp/App/Widroom/Controller/IndexController.class.php",
+		"/Users/sun/MyApplication/php/tp/lottery.php",
+		"/Users/sun/MyApplication/php/tp/Widroom.php",
+		"/Users/sun/MyApplication/php/tp/App/Api/Controller/BrokersController.class.php",
+		"/Users/sun/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/sun/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/sun/MyApplication/php/tp/App/flashpay/Controller/AdminController.class.php",
+		"/Users/sun/MyApplication/php/tp/App/Lotteryfc/Controller/s.php",
+		"/Users/sun/MyApplication/php/tp/App/Lotteryfc/Controller/CommonController.class.php",
+		"/Users/sun/MyApplication/php/tp/App/flashpay/Controller/IndexController.class.php",
+		"/Users/sun/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/sun/MyApplication/php/tp/App/flashpay/Controller/MenuController.class.php",
+		"/Users/sun/MyApplication/php/tp/tp.sublime-workspace",
+		"/Users/sun/MyApplication/php/tp/tp.sublime-project",
+		"/Users/sun/MyApplication/php/tp/flashpay.php",
+		"/Users/sun/MyApplication/php/tp.sublime-project",
+		"/Users/sun/MyApplication/php/ci/.gitignore",
+		"/Users/sun/MyApplication/php/ci/composer.json",
+		"/Users/sun/MyApplication/php/ci/license.txt",
+		"/Users/sun/MyApplication/php/tp/reading.php",
+		"/Users/sun/MyApplication/tp.sublime-project",
+		"/Users/sun/MyApplication/php/haozan/App/housekeeper/Controller/IndexController.class.php",
+		"/Users/sun/MyApplication/php/ci/ci",
+		"/Users/sun/sites/ld/App/Common/Common/function.php",
+		"/Users/sun/sites/ld/App/Huiyuan/Controller/TellController.class.php",
+		"/Users/sun/sites/tk/App/Api/Controller/WechatapiController.class.php",
+		"/Users/sun/sites/ld/App/Common/Model/WechatModel.class.php",
+		"/Users/sun/sites/ld/App/Huiyuan/Conf/config.php",
+		"/Users/sun/sites/ld/App/Common/Conf/config.php",
+		"/Users/sun/sites/tk/App/Common/Common/function_old.php",
+		"/Users/sun/sites/tk/App/Common/Common/function.php",
+		"/Users/sun/sites/ld/huiyuan.php",
+		"/Users/sun/sites/ld/App/Huiyuan/Controller/TestController.class.php",
+		"/Users/sun/sites/ld/Runtime/Logs/Huiyuan/15_11_26.log",
+		"/Users/sun/sites/ld/Runtime/Temp/e1a94a9a1fb75fed58b26a721a0056d5.php",
+		"/Users/sun/sites/tk/App/Lotteryfc/Controller/TestController.class.php",
+		"/Users/sun/sites/ld/ThinkPHP/Common/functions.php",
+		"/Users/sun/sites/ld/App/Huiyuan/Controller/IntegralController.class.php",
+		"/Users/sun/sites/ld/access_token.json",
+		"/Users/sun/sites/ld/App/Huiyuan/View/Integral/Yhjf.html",
+		"/Users/sun/sites/ld/Public/Huiyuan/js/YhjfCtrl.js",
+		"/Users/sun/sites/ld/App/Common/Model/SandCardModel.class.php",
+		"/Users/sun/sites/ld/Public/Huiyuan/js/integralCtrl.js",
+		"/Users/sun/sites/ld/App/Huiyuan/View/Integral/index.html",
+		"/Users/sun/sites/ld/App/Widroom/Controller/PointController.class.php",
+		"/Users/sun/sites/ld/App/Widroom/View/Point/pprinter.html",
+		"/Users/sun/sites/ld/App/Common/index.html",
+		"/Users/sun/sites/ld/Widroom.php",
+		"/Users/sun/sites/ld/App/Widroom/Controller/ApiController.class.php",
+		"/Users/sun/sites/ld/alibs.php",
+		"/Users/sun/sites/ld/Application/alibs/Controller/IndexController.class.php",
+		"/Users/sun/sites/ld/Application/Common/Common/function.php",
+		"/Users/sun/sites/ld/Application/Huiyuan/Controller/CommonController.class.php",
+		"/Users/sun/sites/ld/sfbs.php",
+		"/Users/sun/sites/ld/Application/Huiyuan/Controller/IntegralController.class.php",
+		"/Users/sun/sites/ld/Application/Huiyuan/View/Integral/index.html",
+		"/Users/sun/sites/ld/Application/Runtime/Logs/Huiyuan/15_11_23.log",
+		"/Users/sun/sites/tk/App/Lottery/View/Index/index.html",
+		"/Users/sun/sites/ld/Application/Huiyuan/View/Integral/Yhjf.html",
+		"/Users/sun/sites/ld/Application/Huiyuan/Conf/config.php",
+		"/Users/sun/sites/tk/App/Widroom/Controller/PointController.class.php",
+		"/Users/sun/sites/ld/Application/Common/Conf/config.php",
+		"/Users/sun/Movies/ThinkPHP3.2/20140122/上午内容/代码/代码/shop/Model/GoodsModel.class.php",
+		"/Users/sun/Movies/ThinkPHP3.2/20140122/上午内容/代码/代码/shop/Common/Conf/config.php",
+		"/Users/sun/Movies/ThinkPHP3.2/20140122/上午内容/代码/代码/shop/Home/Controller/EmptyController.class.php",
+		"/Users/sun/Movies/ThinkPHP3.2/20140122/上午内容/代码/代码/shop/Common/Conf/tags.php",
+		"/Users/sun/Movies/ThinkPHP3.2/20140122/上午内容/代码/代码/shop/Common/Lang/en-us.php",
+		"/Users/sun/sites/tk/App/Widroom/Conf/config.php",
+		"/Users/sun/sites/tk/App/Reading/Conf/config.php",
+		"/Users/sun/sites/tk/App/Lotteryfc/Conf/config.php",
+		"/Users/sun/sites/tk/App/Lottery/Conf/config.php",
+		"/Users/sun/sites/tk/App/flashpay/Conf/config.php",
+		"/Users/sun/sites/tk/App/Widroom/View/Point/pprinter.html",
+		"/Users/sun/sites/tk/App/Widroom/View/index.html",
+		"/Users/sun/sites/tk/api.php",
+		"/Users/sun/sites/tk/tk.sublime-project",
+		"/Users/sun/py/py.sublime-workspace",
+		"/Users/sun/py/sds.py",
+		"/Users/sun/py/py.sublime-project",
+		"/Users/sun/sites/tk/tk.sublime-workspace",
+		"/Users/sun/sites/tk/App/Widroom/Controller/tk.sublime-workspace",
+		"/Users/sun/sites/tk/App/test/Controller/IndexController.class.php",
+		"/Users/sun/sites/tk/phone.txt",
+		"/Users/sun/sites/tk/App/test/Conf/config.php",
+		"/Users/sun/sites/tk/App/test/Controller/phone.txt",
+		"/Users/sun/sites/tk/App/Lotteryfc/View/Index/index.html",
+		"/Users/sun/sites/tk/App/Lotteryfc/Controller/IndexController.class.php",
+		"/Users/sun/sites/tk/test.php",
+		"/Users/sun/sites/tk/App/Lotteryfc/Common/function.php",
+		"/Users/sun/sites/tk/App/Lotteryfc/View/Index/prize.html",
+		"/Users/sun/sites/tk/reading.php",
+		"/Users/sun/sites/tk/App/Widroom/Controller/EmptyController.class.php",
+		"/Users/sun/sites/tk/App/Widroom/Controller/ApiController.class.php",
+		"/Users/sun/Library/Application Support/Sublime Text 2/Packages/User/PHP.sublime-settings",
+		"/Users/sun/sites/tk/App/Widroom/Controller/tk.sublime-project",
+		"/Users/sun/sites/tk/App/Widroom/Controller/IndexController.class.php",
+		"/Users/sun/sites/tk/App/Widroom/Controller/sd.php",
+		"/Users/sun/sites/tk/thinkphp.sublime-project",
+		"/Users/sun/sites/tk/App/Lotteryfc/Controller/CommonController.class.php",
+		"/Users/sun/sites/tk/App/Widroom/Common/function.php",
+		"/Users/sun/sites/tk/App/Widroom/Controller/phone.txt",
+		"/Users/sun/sites/tk/Widroom.php",
+		"/Users/sun/sites/tk/lotteryfc.php",
+		"/Users/sun/sites/tk/README.md",
+		"/Users/sun/sites/CommonController.class.php"
+	],
+	"find":
+	{
+		"height": 50.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"6",
+			"font_face",
+			"font_size",
+			"font_face",
+			"translate_tabs_to_spaces",
+			"wx_openid",
+			"GetCurUrl",
+			"redirect",
+			" $",
+			"GetCurUrl",
+			"session_start",
+			"session_start ",
+			"session",
+			"SESSION_AUTO_START",
+			"getOpenId",
+			"GetCurUrl",
+			"wx_session",
+			"getAccessToken",
+			"http_get",
+			"getSignPackage",
+			"getAccessToken",
+			"GetCurUrl",
+			"expire_time",
+			"access_token(",
+			"9517",
+			"            \n",
+			"hidden",
+			"userListSilder",
+			"TransDetail",
+			"积分详情",
+			"SendAuthCode",
+			"check",
+			"card",
+			"div_messages",
+			"9827",
+			"9837",
+			"6036660066000003004",
+			"scoreRecords",
+			"get",
+			"9767",
+			"updateCardNoByPhone",
+			"wx_openid",
+			"file_put_contents",
+			"sun",
+			"getJsApiTicket",
+			"getSignPackage",
+			");\n",
+			"updateCardNoByPhone",
+			"'];\n",
+			"openid",
+			"hidden",
+			"l",
+			"GetCurUrl",
+			"getSignPackage",
+			"getSignPackages",
+			"wx_session",
+			"wx_openid",
+			"notifyQrScanData",
+			"})\n",
+			">\n",
+			"button",
+			"common",
+			"];\n",
+			"INSERT ",
+			"\");\n",
+			"dectime",
+			"hid",
+			"hiden",
+			"luck_type",
+			">\n",
+			"过期",
+			"prize",
+			"limit",
+			"myprizepro",
+			"prize",
+			"ctime",
+			"\n",
+			"	\"",
+			"');\n",
+			");\n",
+			"}\n",
+			"();\n",
+			"res",
+			"prize_arr",
+			"wx_access_token",
+			"王磊",
+			"warx7VZclcDl6BLTHuRVYFOh9JM95LG6xHMdhAP_Mns",
+			"function.php",
+			"curl",
+			"()\n",
+			"密码",
+			"_empty",
+			"GetCurUrl",
+			"wx_openid",
+			"wx30ec9e811ab3a870",
+			"gameover",
+			"\";\n"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Widroom.php",
+					"settings":
+					{
+						"buffer_size": 1021,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								987,
+								987
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 280.0,
+	"status_bar_visible": true
+}

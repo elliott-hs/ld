@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>{$Think.config.title}</title>
+    <meta charset="utf-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <include file="public:css_" />    
+</head>
+<body>
+	<div>
+		<div class="mycenter">
+	        <div class="ub ub-ver ub-ac ub-pc">
+	        	<img src="{$img}" class="setimg">
+	        	<div class="ulev2">{$name}</div>
+	        	<div>{:mobile_asterisk($tel)}</div>
+	        </div>
+	    </div>
+	    <div class="mt1">
+	    	<div class="bgw mg ulev1 uc-a bd ">
+	    		<div class="bb1">
+	    			<p class="pd mg dib br1 pr1 c2">商品</p>
+	    			<span>{$product}</span>
+	    		</div>
+	    		<div>
+	    			<p class="pd mg dib br1 pr1 c2">积分</p>
+	    			<span><span class="c1">{$score}</span>分</span>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div class="mt1">
+			<if condition="$status eq 1">
+				<div class="btn" id="pay">确认支付</div>
+			<else/>
+				<div class="btn" id="payok">{$info}</div>
+				<a href="__URL__/orderList?sid={$sid}"><div class="btn btn-org">查询订单</div></a>
+			</if>
+			<div class="btn hide" id="payok">已支付</div>
+			<a href="__URL__/orderList?sid={$sid}"><div class="btn btn-org  hide" id="order">查询订单</div></a>
+	    </div>
+<!-- 	    <div class="pay-fade hide">
+		    <div class='ub ub-ver ub-ac ub-pc pdt2'>
+		    	<img src="images/yes.png" style="width:3em">
+		    	<div class="c4 pdtb ulev2">支付成功</div>
+		    </div>
+	    </div> -->
+	</div>
+<input type="hidden" name="qid" id="qid" value="{$qid}">
+<input type="hidden" name="url" id="url" value="{$url}">
+</body>
+<include file="public:js_" />  
+<script type="text/javascript">
+	var qid = $("#qid").val();
+	var url = $("#url").val();
+	$("#pay").click(function(){
+		Util.showmsg('确定后将扣除您的相应积分','','','confirm',qid,url)
+	})
+</script>
+</html>

@@ -1,0 +1,368 @@
+[ 2015-12-02T16:56:41+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0011s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=50 ) LIMIT 5   [ RunTime:0.0003s ]
+
+[ 2015-12-02T16:56:50+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0019s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0022s ]
+
+[ 2015-12-02T16:56:53+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000263s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0009s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=50 ) LIMIT 5   [ RunTime:0.0003s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6027660066000000975' WHERE ( huiyuan_id=50 ) [ RunTime:0.0017s ]
+NOTIC: [2] file_get_contents(http://a.forcent.cn/IhuiYuan/User/phpsha1?str1=20151202&amp;str2=660066990000001&amp;str3=00000001&amp;str4=512366): failed to open stream: HTTP request failed!  /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+SQL: UPDATE `t_huiyuan` SET `card_no_`='' WHERE ( huiyuan_id=51 ) [ RunTime:0.0026s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6027660066000003037' WHERE ( huiyuan_id=52 ) [ RunTime:0.0017s ]
+NOTIC: [2] file_get_contents(http://a.forcent.cn/IhuiYuan/User/phpsha1?str1=20151202&amp;str2=660066990000001&amp;str3=00000001&amp;str4=512368): failed to open stream: HTTP request failed!  /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+SQL: UPDATE `t_huiyuan` SET `card_no_`='' WHERE ( huiyuan_id=53 ) [ RunTime:0.0017s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6027660066000004043' WHERE ( huiyuan_id=54 ) [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006835s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006913s ]
+
+[ 2015-12-02T16:56:53+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0010s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+
+[ 2015-12-02T16:56:54+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000249s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0009s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+
+[ 2015-12-02T16:58:01+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000189s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0020s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2015-12-02T17:00:24+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0025s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+NOTIC: [2] file_get_contents(http://a.forcent.cn/IhuiYuan/User/phpsha1?str1=20151202&amp;str2=660066990000001&amp;str3=00000001&amp;str4=512375): failed to open stream: HTTP request failed!  /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+NOTIC: [2] SoapClient::__doRequest(): connect() failed: Network is unreachable /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 91 行.
+ERR: Could not connect to host
+
+[ 2015-12-02T17:00:24+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000254s ]
+
+[ 2015-12-02T17:00:48+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000240s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0009s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='1' WHERE ( huiyuan_id=500 ) [ RunTime:0.0006s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='1' WHERE ( huiyuan_id=501 ) [ RunTime:0.0006s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='1' WHERE ( huiyuan_id=502 ) [ RunTime:0.0004s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='1' WHERE ( huiyuan_id=503 ) [ RunTime:0.0003s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='1' WHERE ( huiyuan_id=504 ) [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000368s ]
+
+[ 2015-12-02T17:00:53+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000255s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0019s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='1' WHERE ( huiyuan_id=500 ) [ RunTime:0.0004s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='1' WHERE ( huiyuan_id=501 ) [ RunTime:0.0003s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='1' WHERE ( huiyuan_id=502 ) [ RunTime:0.0003s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='1' WHERE ( huiyuan_id=503 ) [ RunTime:0.0003s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='1' WHERE ( huiyuan_id=504 ) [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000338s ]
+
+[ 2015-12-02T17:04:10+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000241s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0020s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+NOTIC: [2] file_get_contents(http://a.forcent.cn/IhuiYuan/User/phpsha1?str1=20151202&amp;str2=660066990000001&amp;str3=00000001&amp;str4=512376): failed to open stream: HTTP request failed!  /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+SQL: UPDATE `t_huiyuan` SET `card_no_`='' WHERE ( huiyuan_id=500 ) [ RunTime:0.0015s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6021660066000013823' WHERE ( huiyuan_id=501 ) [ RunTime:0.0017s ]
+NOTIC: [2] file_get_contents(http://a.forcent.cn/IhuiYuan/User/phpsha1?str1=20151202&amp;str2=660066990000001&amp;str3=00000001&amp;str4=512378): failed to open stream: HTTP request failed!  /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+SQL: UPDATE `t_huiyuan` SET `card_no_`='' WHERE ( huiyuan_id=502 ) [ RunTime:0.0023s ]
+NOTIC: [2] file_get_contents(http://a.forcent.cn/IhuiYuan/User/phpsha1?str1=20151202&amp;str2=660066990000001&amp;str3=00000001&amp;str4=512379): failed to open stream: HTTP request failed!  /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+SQL: UPDATE `t_huiyuan` SET `card_no_`='' WHERE ( huiyuan_id=503 ) [ RunTime:0.0016s ]
+NOTIC: [2] file_get_contents(http://a.forcent.cn/IhuiYuan/User/phpsha1?str1=20151202&amp;str2=660066990000001&amp;str3=00000001&amp;str4=512380): failed to open stream: HTTP request failed!  /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+SQL: UPDATE `t_huiyuan` SET `card_no_`='' WHERE ( huiyuan_id=504 ) [ RunTime:0.0024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003629s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003677s ]
+
+[ 2015-12-02T17:20:39+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000272s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0019s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6024660066000011441' WHERE ( huiyuan_id=500 ) [ RunTime:0.0017s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6021660066000013823' WHERE ( huiyuan_id=501 ) [ RunTime:0.0016s ]
+NOTIC: [2] file_get_contents(http://a.forcent.cn/IhuiYuan/User/phpsha1?str1=20151202&amp;str2=660066990000001&amp;str3=00000001&amp;str4=512383): failed to open stream: HTTP request failed!  /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+SQL: UPDATE `t_huiyuan` SET `card_no_`='' WHERE ( huiyuan_id=502 ) [ RunTime:0.0017s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6003660066000077238' WHERE ( huiyuan_id=503 ) [ RunTime:0.0016s ]
+NOTIC: [2] file_get_contents(http://a.forcent.cn/IhuiYuan/User/phpsha1?str1=20151202&amp;str2=660066990000001&amp;str3=00000001&amp;str4=512385): failed to open stream: HTTP request failed!  /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+SQL: UPDATE `t_huiyuan` SET `card_no_`='' WHERE ( huiyuan_id=504 ) [ RunTime:0.0025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000640s ]
+
+[ 2015-12-02T17:30:30+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000252s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0021s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6024660066000011441' WHERE ( huiyuan_id=500 ) [ RunTime:0.0016s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6021660066000013823' WHERE ( huiyuan_id=501 ) [ RunTime:0.0017s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6027660066000000158' WHERE ( huiyuan_id=502 ) [ RunTime:0.0016s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6003660066000077238' WHERE ( huiyuan_id=503 ) [ RunTime:0.0015s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6027660066000002245' WHERE ( huiyuan_id=504 ) [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000614s ]
+
+[ 2015-12-02T17:32:07+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000248s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0020s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6024660066000011441' WHERE ( huiyuan_id=500 ) [ RunTime:0.0016s ]
+NOTIC: [2] file_get_contents(http://a.forcent.cn/IhuiYuan/User/phpsha1?str1=20151202&amp;str2=660066990000001&amp;str3=00000001&amp;str4=512392): failed to open stream: HTTP request failed!  /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+SQL: UPDATE `t_huiyuan` SET `card_no_`='' WHERE ( huiyuan_id=501 ) [ RunTime:0.0015s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6027660066000000158' WHERE ( huiyuan_id=502 ) [ RunTime:0.0016s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6003660066000077238' WHERE ( huiyuan_id=503 ) [ RunTime:0.0016s ]
+NOTIC: [2] file_get_contents(http://a.forcent.cn/IhuiYuan/User/phpsha1?str1=20151202&amp;str2=660066990000001&amp;str3=00000001&amp;str4=512395): failed to open stream: HTTP request failed!  /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+SQL: UPDATE `t_huiyuan` SET `card_no_`='' WHERE ( huiyuan_id=504 ) [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000565s ]
+
+[ 2015-12-02T17:33:00+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0022s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6024660066000011441' WHERE ( huiyuan_id=500 ) [ RunTime:0.0016s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6021660066000013823' WHERE ( huiyuan_id=501 ) [ RunTime:0.0004s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6027660066000000158' WHERE ( huiyuan_id=502 ) [ RunTime:0.0017s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6003660066000077238' WHERE ( huiyuan_id=503 ) [ RunTime:0.0017s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6027660066000002245' WHERE ( huiyuan_id=504 ) [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000637s ]
+
+[ 2015-12-02T17:34:26+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000280s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0020s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6024660066000011441' WHERE ( huiyuan_id=500 ) [ RunTime:0.0017s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6021660066000013823' WHERE ( huiyuan_id=501 ) [ RunTime:0.0017s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6027660066000000158' WHERE ( huiyuan_id=502 ) [ RunTime:0.0017s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6003660066000077238' WHERE ( huiyuan_id=503 ) [ RunTime:0.0017s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6027660066000002245' WHERE ( huiyuan_id=504 ) [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000590s ]
+
+[ 2015-12-02T17:35:51+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0009s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+NOTIC: [2] file_get_contents(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+NOTIC: [2] file_get_contents(http://a.forcent.cn/IhuiYuan/User/phpsha1?str1=20151202&amp;str2=660066990000001&amp;str3=00000001&amp;str4=512406): failed to open stream: php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+NOTIC: [2] SoapClient::__doRequest(): connect() failed: Network is unreachable /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 91 行.
+ERR: Could not connect to host
+
+[ 2015-12-02T17:36:41+08:00 ] 127.0.0.1 /ld/Widroom.php/test/abc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `t_huiyuan` [ RunTime:0.0019s ]
+SQL: SELECT `huiyuan_id`,`huiyuan_tel`,`house` FROM `t_huiyuan` WHERE ( huiyuan_id>=500 ) LIMIT 5   [ RunTime:0.0003s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6024660066000011441' WHERE ( huiyuan_id=500 ) [ RunTime:0.0014s ]
+NOTIC: [2] file_get_contents(http://a.forcent.cn/IhuiYuan/User/phpsha1?str1=20151202&amp;str2=660066990000001&amp;str3=00000001&amp;str4=512408): failed to open stream: HTTP request failed!  /Users/sun/MyApplication/www/ld/App/Common/Model/SandCardModel.class.php 第 259 行.
+SQL: UPDATE `t_huiyuan` SET `card_no_`='' WHERE ( huiyuan_id=501 ) [ RunTime:0.0016s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6027660066000000158' WHERE ( huiyuan_id=502 ) [ RunTime:0.0016s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6003660066000077238' WHERE ( huiyuan_id=503 ) [ RunTime:0.0017s ]
+SQL: UPDATE `t_huiyuan` SET `card_no_`='6027660066000002245' WHERE ( huiyuan_id=504 ) [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2015-12-02T20:48:08+08:00 ] 127.0.0.1 /ld/widroom.php/test/a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2015-12-02T20:48:26+08:00 ] 127.0.0.1 /ld/widroom.php/test/a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000314s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000360s ]
+
+[ 2015-12-02T20:49:52+08:00 ] 127.0.0.1 /ld/widroom.php/test/a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000494s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2015-12-02T20:50:45+08:00 ] 127.0.0.1 /ld/widroom.php/test/a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000298s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000341s ]
+
+[ 2015-12-02T20:50:59+08:00 ] 127.0.0.1 /ld/widroom.php/test/a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000265s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000300s ]
+
+[ 2015-12-02T20:54:23+08:00 ] 127.0.0.1 /ld/widroom.php/test/a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000544s ]
+
+[ 2015-12-02T20:54:25+08:00 ] 127.0.0.1 /ld/widroom.php/test/a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000235s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000266s ]
+
+[ 2015-12-02T20:58:26+08:00 ] 127.0.0.1 /ld/widroom.php/test/a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000243s ]
+NOTIC: [8] Undefined variable: cache /Users/sun/MyApplication/www/ld/App/Widroom/Controller/TestController.class.php 第 48 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000257s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000286s ]
+

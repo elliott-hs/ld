@@ -1,0 +1,26 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{
+ -webkit-tap-highlight-color: rgba(0,0,0,0)
+}
+html, body { border: 0px; padding: 0px; margin: 0px; }
+.container { width: 100%; height: 100%; position: absolute; z-index: 0; }
+.iframe_c { width: 100%; height: 100%; background-color: black; }
+.iframe_c iframe { width: 100%; height: inherit; border: 0px; position: absolute; -webkit-transition-duration: 350ms; -webkit-transition-property: all; background-color: black; }
+.fix_bottom { position: fixed; width: 100%; z-index: 111; bottom: 0px; }
+ul { position: absolute; width: 100%; list-style: none; margin: 0px; border: 0px; padding: 0px; z-index: 10; background-size: 100% 100%; }
+/* 按钮 */
+.oldIframe { z-index: 5; }
+.newIframe { z-index: 1; }
+.audio_btn { position: absolute; width: 40px; height: 40px; right: 0px; bottom: 10px; background-image: url(../images/wxloushu/play.png); background-size: 100% 100%; }
+.audio_btn.pause { background-image: url(../images/wxloushu/pause.png); }
+#animation { position: absolute; z-index: 1000; width: 100%; height: 100%; border: 0px; margin: 0px; padding: 0px; }
+/* 开机动画 */
+#page_container { overflow: hidden;height: 100%; }
+#page_slider { height: 100%; }
+.item { height: 100%; float: left; overflow: hidden; background-position: left top; background-size: 100% auto; background-repeat: no-repeat; background-color: black; }
+.wenzi { -webkit-transition-property: all; -webkit-transition-duration: 2100ms; height: 0px; overflow: hidden; }
+#img1_2, #img2_2, #img3_2 { -webkit-transition-delay: 1700ms; }
+.point{
+	background-repeat:no-repeat; background-position:center center;
+}

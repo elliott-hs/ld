@@ -1,0 +1,396 @@
+﻿@charset "utf-8";
+html {width:100%;height:100%;
+}
+body {height: 100%; overflow: hidden; font-size:12px;}
+*{
+    margin:0;
+    padding:0;
+}
+.div {
+width: 100%;
+height:100%;
+text-align: center;
+}
+.p1 {
+font-size: 28px;
+background-color:#747F8B;
+color: #ffffff;
+position: relative;
+letter-spacing: 2px;
+font-family: 微软雅黑;
+}
+input.phone {
+width: 60%;
+right: 10%;
+height: 30px;
+color: #000;
+text-align: left;
+border: 0;
+background-color: transparent;
+opacity:1;
+}
+input.card {
+    width: 60%;
+height: 30px;
+color: #000;
+text-align: left;
+border: 0;
+background-color: transparent;
+opacity:1;
+}
+input.buttom {
+position: absolute;
+top: 260px;
+width: 80%;
+left: 10%;
+height: 30px;
+color: #fff;
+border: 0;
+background: #ff7a4d;
+border-radius:5px;
+}
+.cardtu {
+position: absolute;
+height: 25px;
+left: 13%;
+}
+.card::-webkit-input-placeholder {
+text-align:left;
+}
+.phonetu {
+position: absolute;
+height: 25px;
+left: 13%;
+}
+.phone::-webkit-input-placeholder {
+text-align:left;
+}
+
+.dqjf {
+font-size: 16px;
+padding-top: 25px;
+color: #fff;
+}
+.sj {
+font-size: 50px;
+color: #fff;
+margin-top: 5px;
+margin-bottom: 15px;
+}
+.img1 {
+width: 100%;
+margin-top: 0px;
+}
+
+.table1 {
+width: 90%;
+margin-left: 5%;
+margin-top: 30px;
+font-size: 14px;
+vertical-align: top;
+border: 2px solid #fff;
+border-radius: 5px;
+}
+.tu {
+    height: 27px;
+}
+.a {
+position: relative;
+top: 10px;
+width: 110px;
+}
+.jiantou2 {
+position: absolute;
+height: 12px;
+line-height: 12px;
+top: 160px;
+left:62%;
+}
+.border {
+    border-bottom: 2px dashed #fff;
+}
+.check {
+position: absolute;
+top: 200px;
+width: 80%;
+left: 10%;
+height: 30px;
+color: #c5c4c4;
+border-color: #e7e7e7;
+font-size:14px;
+text-align: left;
+border-radius: 5px;
+}
+.bind {
+width: 80%;
+margin-left: 10%;
+margin-top: 10%;
+height: 60px;
+color: #fff;
+border: 0;
+background: #E9BA34;
+border-radius: 5px;
+text-align: center;
+line-height: 60px;
+font-size: 20px;
+font-weight: 700;
+}
+.code {
+    display: inline-block;
+color: white;
+background-color:#747F8B;
+padding: 10px;
+position: absolute;
+right: 20%;
+}
+.div_phone {
+    border-bottom: 1px solid  #747F8B;
+width: 95%;
+padding:15px 0px;
+padding-left:5%;
+text-align: left;
+background:#F9FAFA;
+opacity:0.5;
+}
+.div_code {
+     border-bottom: 1px solid  #747F8B;
+background:#F9FAFA;
+opacity:0.5;
+width: 95%;
+padding:15px 0px;
+padding-left:5%;
+text-align: left;
+}
+.div_name {
+border-bottom:1px solid  #747F8B;
+width: 95%;
+padding:15px 0px;
+padding-left:5%;
+background:#F9FAFA;
+opacity:0.5;
+text-align: left;
+}
+.div_birth {
+border-bottom:1px solid  #747F8B;
+width: 95%;
+padding:15px 0px;
+padding-left:5%;
+text-align: left;
+background:#F9FAFA;
+opacity:0.5;
+}
+.div_info {
+    border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+background-color: #074d12;
+opacity: 0.7;
+width: 90%;
+margin-left: 5%;
+line-height: 35px;
+height: 35px;
+  color: #fff;
+}
+    .div_info .message {
+        display: inline-block;
+margin-left: 5%;
+font-size: 16px;
+font-weight: bold;
+float: left;
+width: 95%;
+text-align: left;
+    }
+        .div_info .message span {
+            float: right;
+position: relative;
+font-size: 12px;
+right: 5%;
+font-weight: 100;
+        }
+    .div_info .password {
+display: inline-block;
+font-size: 12px;
+float: right;
+text-decoration: underline;
+width: 30%;
+height: 25px;
+margin-top: 5px;
+line-height: 25px;  
+opacity:0.5;  
+    }
+.div_message {
+background-color: #263320;
+opacity: 0.5;
+width: 90%;
+margin-left: 5%;
+line-height: 35px;
+height: 35px;
+color: #fff;
+}
+    .div_message .name {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    margin-left: 2%;
+    }
+     .div_message .name .img{
+    height: 30px;
+    float: left;
+    margin-top: 3px;
+    }
+   .div_message .phone {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    margin-left: 2%;
+    }
+     .div_message .phone .img{
+    height: 26px;
+    float: left;
+    margin-top: 3px;
+    width: 30px;
+    }
+.div_card {
+    border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+background-color: #263320;
+opacity: 0.5;
+width: 90%;
+margin-left: 5%;
+line-height: 35px;
+height: 35px;
+color: #fff;
+border-bottom:1px solid  #747F8B;
+}
+    .div_card .img {
+          height: 30px;
+    float: left;
+    margin-top: 3px;
+    margin-left: 2%;
+    }
+
+.div_mingxi {
+    background-color: #263320;
+opacity: 0.5;
+width: 90%;
+margin-left: 5%;
+line-height: 50px;
+height: 51px;
+color: #fff;
+}
+
+    .div_mingxi .shop {
+        display: inline-block;
+        float: left;
+        text-align: left;
+        font-size: 14px;
+    }
+    .div_mingxi .jifen {
+        display: inline-block;
+        float: right;
+        font-size: 16px;
+    }
+
+.div_card_phone {
+    width: 70%;
+float: right;
+right: 0px;
+text-align: left;
+}
+.div_messages {
+    position: fixed;
+top: 30%;
+width: 90%;
+left: 5%;
+float: left;
+color: white;
+}
+    .div_messages span {
+        position: absolute;
+right: 8px;
+top: 2px;
+font-size: 18px;
+    }
+    .div_messages h1 {
+text-align: center;
+font-size: 18px;
+margin-bottom: 4px;
+margin-top: 10px;
+    }
+    .div_messages h2 {
+font-size: 14px;
+font-weight: 400;
+margin: 0;
+width: 90%;
+margin-left: 5%;
+line-height: 24px;
+    }
+.div_messsage_back {
+    position: absolute;
+width: 100%;
+background-color: black;
+height: 100%;
+top: 0;
+opacity: 0.8;
+z-index: -1;
+border-radius: 5px;
+}
+.div_jfjj {
+    width: 90%;
+margin-left: 5%;
+border-radius: 5px;
+height: 60px;
+color: white;
+background-color: #263320;
+opacity: 0.5;
+position: relative;
+padding: 8px 0;
+}
+.jfjj_left {
+    width: 65%;
+display: inline;
+float: left;
+text-align: left;
+height: 50px;
+margin-top: 5px;
+border-right: 1px dashed white;
+padding-left: 4%;
+}
+.jfjj_right {
+    width: 30%;
+float: left;
+display: inline;
+line-height: 60px;
+text-decoration: underline;
+}
+.dqjf1 {
+    margin: 0;
+line-height: 20px;
+}
+.sj1 {
+    margin: 0;
+line-height: 30px;
+font-size: 30px;
+}
+.div_jfjj1 {
+    width: 90%;
+margin-left: 5%;
+border-radius: 5px;
+height: 30px;
+color: white;
+background-color: #263320;
+opacity: 0.5;
+position: relative;
+padding: 8px 0;
+}
+.jfjj_left1 {
+    width: 65%;
+display: inline;
+float: left;
+text-align: left;
+padding-left: 4%;
+text-decoration: underline;
+font-size: 14px;
+line-height: 30px;
+}

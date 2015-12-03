@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>{$Think.config.title}</title>
+    <meta charset="utf-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <include file="public:css_" />    
+</head>
+<body>
+
+	
+	
+	
+		<div class="bj hide" id="part1">
+		<div style="width: 80%;margin: 0 auto;padding-top: 3em;">
+	    	<img src="{$Think.config.static_path}images/top2.png" style="width:100%">
+	    </div>
+		<div class="form-login" style="margin:0">
+			<div class="mt1">
+				<div class="pd"><img src="{$Think.config.static_path}images/icon3.png" style="width: 2em;"><i class="tri"></i><div class="bor-t"><p id="business">请选择商品</p></div></div>
+			</div>
+			<div class="mt1">
+				<div class="pd"><img src="{$Think.config.static_path}images/icon4.png" style="width: 2em;vertical-align: bottom;"><div class="dib bor-r"><p  id="integrate"></p></div><span class="c4 pd1">积分</span></div>
+			</div>
+		</div>
+
+		<div class="foot-icon" style="position: relative;margin-top:1em;bottom: 1em;">
+	    	<a href="javascript:qrcode();"><img src="{$Think.config.static_path}images/icon5.png" style="width:60%;margin-left:20%"></a>
+	    	<img src="{$Think.config.static_path}images/icon6.png" class="next">
+	    </div>
+		<div style="position: relative;">
+	    	<img src="{$Think.config.static_path}images/word.png" style="width:100%">
+	    </div>
+	</div>
+	<div id="part2"  class="bj">
+		<div style="width: 80%;margin: 0 auto;padding-top: 3em;">
+	    	<img src="{$Think.config.static_path}images/top.png" style="width:100%">
+	    </div>
+		<div class="form-choose" >   
+			<div class="mt1 choose-good">
+			<volist name="list" id="val" key="k">
+				<div class="checkbox"><span data="{$val.id}|{$val.title}|{$val.score}|{$val.total}|{$val.num}"   style="font-size:20px">{$val.title}</span></div>
+				</volist>
+
+			</div>
+		</div>
+		<div class="foot-icon">
+			<img src="{$Think.config.static_path}images/icon2.png" style="width:71%;margin: 20px 15%;" id="commit">
+	    	<a href="__URL__/orderList?sid={$sid}"><img src="{$Think.config.static_path}images/icon1.png" style="width:30%;margin-left:15%"></a>
+	    	<a href="__URL__/phone"><img src="{$Think.config.static_path}images/icon10.png" style="width:30%;margin-left:10%"></a>
+	    </div>
+		<div style="bottom: 2em;position: fixed;width: 100%;">
+	    	<img src="{$Think.config.static_path}images/word.png" style="width:100%">
+	    </div>
+	    <!-- <div class="btnout"><p class="btnin">查询订单</p></div>
+	    <div class="btnout2"><p class="btnin2">完成</p></div> -->
+	</div>
+<input type="hidden"  name="pid" id="pid" />
+<input type="hidden" name="score" id="score" />
+<input type="hidden" value="{$sid}" name="ssid"  id="sid"/>
+</body>
+<include file="public:js_" />   
+<script type="text/javascript">
+$(function () {
+	//添加减少购买数量
+	$(".checkbox").click(function(){
+		$(".checkbox").removeClass("obj")
+		
+		var str=$(this).find("span").attr("data");
+		var arr=str.split('|');
+		//Util.info(arr[4]+'hh'+arr[3]);return;
+		if(parseInt(arr[4])>=parseInt(arr[3])){
+			Util.info(arr[1]+"库存不足");
+			$("#business").html("");
+			$("#pid").val("");
+			$("#score").val("");
+			$("#integrate").html("")
+			return;
+		}
+		$(this).toggleClass("obj");
+		var obj='';
+		var inte=0,pid='';
+		$(".obj").each(function(){
+			pid += arr[0];
+			obj+=arr[1]+'<br>';
+			inte+=parseInt(arr[2]);
+		})
+		$("#business").html(obj);
+		$("#pid").val(pid);
+		$("#score").val(inte);
+		$("#integrate").html(inte)
+	})
+	$("#commit").click(function(){
+		var choice=$("#business").text();
+		if(choice=='请选择商品'||choice==''){
+			Util.info("请选择商品");
+		}else{
+			$("#part2").addClass("hide");
+			$("#part1").removeClass("hide");		
+		}
+		
+	})
+	$(".next").click(function(){
+		$("#part1").addClass("hide");
+		$("#part2").removeClass("hide");
+	})
+});
+	
+	var lock = true;
+	function qrcode(){
+		var pid = $("#pid").val();
+		var sid = $("#sid").val();
+		var score = $("#score").val();
+
+		//alert(score);return;
+		if(lock){
+		$.getJSON('__URL__/doAdd', {
+			pid : pid,
+			sid : sid,
+			score : score
+		
+		},function(json) {
+				if(json.status >0 ){
+					location.href="__URL__/qrcode?qid="+json.qid+"&sid="+json.sid;
+				}else{
+					Util.info(json.info);
+				}
+		});
+		lock = false;
+		}			
+	}
+
+</script>
+</html>

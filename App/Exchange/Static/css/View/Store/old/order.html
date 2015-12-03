@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>{$Think.config.title}</title>
+    <meta charset="utf-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection">
+    <include file="public:css_" />  
+</head>
+<body>
+	<div class="bj">
+		<div class="header">
+			<a href="javascript:history.go(-1)"><img src="{$Think.config.static_path}images/back.png" class="back"></a>
+			<h1>订单查询</h1>
+		</div>
+		<div>
+			<table>
+				<thead>
+					<td><span>姓名</span></td>
+					<td><span>电话</span></td>
+					<td><span>消费积分</span></td>
+					<td><span>消费时间</span></td>
+				</thead>
+				<tbody>
+				<volist name="list" id="val" key="k">
+					
+					<tr onclick="show({$val.id});">
+						<td>{$val.huiyuanname}</td>
+						<td>{$val.huiyuantel}</td>
+						<td>{$val.score}</td>
+						<td><?php echo  date('Y-m-d',strtotime($val['paytime']));?></td>
+					</tr>
+				
+					</volist>
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+<include file="public:js_" />   
+<script type="text/javascript">
+
+function show(id){
+	location.href="__URL__/showorder?id="+id;
+}
+
+</script>
+</html>

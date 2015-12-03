@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<form action="{:u('Member/doAdd')}" method="post" name="myform" id="myform" enctype="multipart/form-data" style="margin-top:10px;">
+<img src="">
+<p>kk</p>
+<p>{:mobile_asterisk('18501532546')}</p>
+<br>
+商品：{$product}
+<br>
+积分：{$score}
+<br>
+价格：{$price}
+<input type="hidden" name="sid" value="{$sid}">
+<input type="hidden" name="qid" value="{$qid}">
+<input type="hidden" name="pid" value="{$pid}">
+<input type="hidden" name="title" value="{$product}">
+<input type="hidden" name="price" value="{$price}">
+<input type="hidden" name="score" value="{$score}">
+<input type="hidden" name="uid" value="{$uid}">
+<br>
+<input type="submit" value="确认支付">
+</form>
+
+</body>
+</html>
